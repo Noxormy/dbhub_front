@@ -1,0 +1,23 @@
+.button {
+    width: 200px;
+    height: 60px;
+    border: 1px solid orange;
+    background: #0003;
+    border-radius: 3px;
+    font-size: 20px;
+    color: orange;
+    font-weight: 600;
+    cursor: pointer;
+    transition: width 0.5s;
+    box-shadow: 7px 5px 1px orange;
+    margin: 200px auto;
+}
+
+.button:hover {
+    width: 250px
+}
+
+.button:active {
+    margin: 207px calc(50% + 7px - 125px);
+    box-shadow: 0 0 0 white;
+}

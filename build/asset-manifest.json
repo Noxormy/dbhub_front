@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/dbhub_front/static/css/main.e6edd826.chunk.css",
+    "main.js": "/dbhub_front/static/js/main.e773d10b.chunk.js",
+    "main.js.map": "/dbhub_front/static/js/main.e773d10b.chunk.js.map",
+    "runtime-main.js": "/dbhub_front/static/js/runtime-main.2f78d774.js",
+    "runtime-main.js.map": "/dbhub_front/static/js/runtime-main.2f78d774.js.map",
+    "static/js/2.2dde8896.chunk.js": "/dbhub_front/static/js/2.2dde8896.chunk.js",
+    "static/js/2.2dde8896.chunk.js.map": "/dbhub_front/static/js/2.2dde8896.chunk.js.map",
+    "index.html": "/dbhub_front/index.html",
+    "precache-manifest.35d53c53b5f08f0d89ca52b1f4bdec8c.js": "/dbhub_front/precache-manifest.35d53c53b5f08f0d89ca52b1f4bdec8c.js",
+    "service-worker.js": "/dbhub_front/service-worker.js",
+    "static/css/main.e6edd826.chunk.css.map": "/dbhub_front/static/css/main.e6edd826.chunk.css.map",
+    "static/js/2.2dde8896.chunk.js.LICENSE": "/dbhub_front/static/js/2.2dde8896.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2f78d774.js",
+    "static/js/2.2dde8896.chunk.js",
+    "static/css/main.e6edd826.chunk.css",
+    "static/js/main.e773d10b.chunk.js"
+  ]
+}

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.sass';
-import Instructions from "./components/Instructions";
+import Index from "./pages/Instructions";
 import CreateDB from "./pages/CreateDB";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     const animationType = '3s ease-in-out infinite loading';
 
     let [apiKey, setApiKey] = useState(localStorage.getItem('apiKey'));
-    let body = apiKey ? <Instructions apiKey={apiKey}/> :
+    let body = apiKey ? <Index apiKey={apiKey}/> :
         <CreateDB callback={() => createDatabase(setLoading).then((apiKey) => setApiKey(apiKey))}/>;
 
     return (

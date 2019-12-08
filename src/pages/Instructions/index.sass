@@ -1,0 +1,58 @@
+.instructions
+  margin: 50px auto
+  width: 50%
+  max-width: 500px
+  text-align: left
+  font-family: monospace
+  font-size: 14px
+
+.instructions
+  > div
+    position: relative
+    background: #121313
+    border: 3px solid #FFA500
+    border-radius: 3px
+    overflow: scroll
+
+  .install
+    height: 32px
+    padding-left: 20px
+    padding-top: 18px
+
+  .usage
+    margin-top: 20px
+    padding: 5px 20px
+    padding-bottom: 90px
+
+.usage
+  .keyword
+    /*color: #14cbff*/
+    color: orange
+  .variable
+    /*color: #ffb800*/
+    color: white
+
+  .func
+    /**color: #ccbe14*/
+    color: orange
+
+  .string
+    /*color: #40a2ff*/
+    color: #4ed900
+
+.copy
+  width: 30px
+  height: 30px
+  fill: orange
+  position: absolute
+  right: 10px
+  top: 10px
+  cursor: pointer
+  transition: fill 0.5s
+
+  &:hover
+    fill: white
+
+  &:active
+    right: 9px
+    top: 11px

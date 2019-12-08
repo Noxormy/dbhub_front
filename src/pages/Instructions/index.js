@@ -11,7 +11,7 @@ function Index(props) {
             </div>
             <div className='usage'>
                 <div onClick={() => copy(usage)}>{copyIcon}</div>
-                {getUsageBlock()}
+                {getUsageBlock(props.apiKey)}
             </div>
         </div>
     );

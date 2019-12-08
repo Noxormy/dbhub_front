@@ -1,9 +1,11 @@
 body {
+  overflow: hidden;
   background-color: #282c34;
 }
 
 .App {
   text-align: center;
+  color: white;
 }
 
 .App-logo {
@@ -35,6 +37,19 @@ body {
 
 .App-link {
   color: #61dafb;
+}
+
+.create_element {
+  padding-top: 100px;
+}
+
+.signs {
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 @keyframes App-logo-spin {

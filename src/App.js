@@ -6,11 +6,16 @@ import Instructions from "./components/Instructions";
 function App() {
     let [apiKey, setApiKey] = useState(false);
     let body = apiKey ? <Instructions apiKey={apiKey}/> :
-        <Button name={"Create Database"} callback={() => createDatabase().then(setApiKey)}/>;
+        <div className="create_element">
+            <h2>Create database in one click</h2>
+            <h3>Make it easy</h3>
+            <Button name={"Create Database"} callback={() => createDatabase().then((apiKey) =>setApiKey(apiKey))}/>
+        </div>;
     return (
     <div className="App">
         <header className="App-header">DB<span className="App-selection">hub</span></header>
         {body}
+        <div className="signs">Created by @noxormy</div>
     </div>
   );
 }

@@ -5,9 +5,11 @@
     color: white;
     text-align: left;
     font-family: monospace;
+    font-size: 14px;
 }
 
 .instructions .install, .instructions .usage {
+    position: relative;
     background: #121313;
     border: 3px solid #FFA500;
     border-radius: 3px;
@@ -22,21 +24,45 @@
 
 .instructions .usage {
     margin-top: 20px;
-    padding: 15px 20px;
+    padding: 5px 20px;
+    padding-bottom: 90px;
 }
 
 .usage .keyword {
-    color: #14cbff;
+    /*color: #14cbff;*/
+    color: orange;
 }
 
 .usage .variable {
-    color: #ffb800;
+    /*color: #ffb800;*/
+    color: white;
 }
 
 .usage .func {
-    color: #ccbe14;
+    /**color: #ccbe14;*/
+    color: orange;
 }
 
 .usage .string {
-    color: #40a2ff;
+    /*color: #40a2ff;*/
+    color: #4ed900;
+}
+
+.copy {
+    width: 30px;
+    height: 30px;
+    fill: orange;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    transition: fill 0.5s;
+}
+
+.copy:hover {
+    fill: white;
+}
+.copy:active {
+    right: 9px;
+    top: 11px;
 }

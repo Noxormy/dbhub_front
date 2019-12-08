@@ -1,6 +1,6 @@
 import Button from "../../components/Button";
 import React from "react";
-import Instructions from "../../components/Instructions";
+import './index.sass'
 
 function CreateDB(props) {
     return(

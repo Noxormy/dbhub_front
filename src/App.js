@@ -1,21 +1,19 @@
 import React, {useState} from 'react';
-import './App.css';
-import Button from "./components/Button";
+import './App.sass';
 import Instructions from "./components/Instructions";
 import CreateDB from "./pages/CreateDB";
-
-
 
 function App() {
     let [isLoading, setLoading] = useState(false);
     const animationType = '3s ease-in-out infinite loading';
 
-    let [apiKey, setApiKey] = useState(false);
-    let body = apiKey ? <Instructions apiKey={apiKey}/> : <CreateDB callback={() => createDatabase(setLoading).then((apiKey) => setApiKey(apiKey))}/>
+    let [apiKey, setApiKey] = useState(localStorage.getItem('apiKey'));
+    let body = apiKey ? <Instructions apiKey={apiKey}/> :
+        <CreateDB callback={() => createDatabase(setLoading).then((apiKey) => setApiKey(apiKey))}/>;
 
     return (
     <div className="App">
-        <header className="App-header">DB<span className="App-selection">hub</span></header>
+        <header className="header">DB<span className="header-selection">hub</span></header>
         <div id="loaderPlaceholder"></div>
         <div id="loader" style={isLoading ? {animation: animationType} : {animation: "none"}}></div>
         {body}
@@ -31,12 +29,13 @@ async function createDatabase(setLoading) {
     setLoading(true);
     let result = await fetch(api + '/' + createNewUser);
     setLoading(false);
+
     if (result.ok) {
         let json = await result.json();
-        console.log(json);
+        localStorage.setItem('apiKey', json);
         return json;
     } else {
-        console.log("Ошибка HTTP: " + result.status);
+        console.log("HTTP Error: " + result.status);
         return false;
     }
 }

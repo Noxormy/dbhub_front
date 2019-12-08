@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './index.sass';
 import {copyIcon, install, usage, getUsageBlock} from "./codeExample";
 
 function Index(props) {
+    let className = 'instructions';
+    let classNameAppear = className + ' appear';
+    const [instructionsClass, setInstructionsClass] = useState(className);
+
+    useEffect(() => {
+        if (instructionsClass === className) setInstructionsClass(classNameAppear);
+    });
     return (
-        <div className='instructions'>
+        <div className={instructionsClass}>
             <div className='install'>
                 <div onClick={() => copy(install)}>{copyIcon}</div>
                 $ {install}

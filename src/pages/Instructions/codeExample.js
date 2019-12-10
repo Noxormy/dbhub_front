@@ -8,7 +8,7 @@ export const copyIcon =
             </g>
         </svg>;
 
-export const getUsageBlock = (apiKey) => {
+export const getUsageBlock = (language, apiKey) => {
         return(
                 <p>
                     <span className="keyword">const</span> {'{'}<span className="variable">getDatabase</span>{'}'} =<span className="func"> require</span>(<span className="string">'dbhub'</span>);<br/>
@@ -35,26 +35,54 @@ export const getUsageBlock = (apiKey) => {
         )
 };
 
-export const install = 'npm install dbhub -s';
+export const nodejs = 'nodejs';
+export const python = 'python';
 
-export const usage =
-    'const {getDatabase} = require(\'dbhub\');\n' +
-    '\n' +
-    'let apikey = \'\';\n' +
-    'let db = getDatabase(apiKey);\n' +
-    '\n' +
-    '// Create collection\n' +
-    'let collectionName = \'example\';\n' +
-    'let collection = db.getCollection(collectionName);\n' +
-    '\n' +
-    '//Usage\n' +
-    'collection.create(element)\n' +
-    'collection.read(id)\n' +
-    'collection.update(id, element)\n' +
-    'collection.delete(id)\n' +
-    '\n' +
-    '//Async\n' +
-    'collection.create(element).then((id) => {});\n' +
-    'collection.read(id).then((element) => {});\n' +
-    'collection.update(id, element).then((success) => {});\n' +
-    'collection.delete(id).then((success) => {});';
+export const install = {
+    'nodejs': 'npm install dbhub -s',
+    'python': 'pip install dbhub'
+};
+
+export const usage = {
+    'nodejs': 'const {getDatabase} = require(\'dbhub\');\n' +
+        '\n' +
+        'let apikey = \'\';\n' +
+        'let db = getDatabase(apiKey);\n' +
+        '\n' +
+        '// Create collection\n' +
+        'let collectionName = \'example\';\n' +
+        'let collection = db.getCollection(collectionName);\n' +
+        '\n' +
+        '//Usage\n' +
+        'collection.create(element)\n' +
+        'collection.read(id)\n' +
+        'collection.update(id, element)\n' +
+        'collection.delete(id)\n' +
+        '\n' +
+        '//Async\n' +
+        'collection.create(element).then((id) => {});\n' +
+        'collection.read(id).then((element) => {});\n' +
+        'collection.update(id, element).then((success) => {});\n' +
+        'collection.delete(id).then((success) => {});',
+
+    'python': 'const {getDatabase} = require(\'dbhub\');\n' +
+        '\n' +
+        'let apikey = \'\';\n' +
+        'let db = getDatabase(apiKey);\n' +
+        '\n' +
+        '// Create collection\n' +
+        'let collectionName = \'example\';\n' +
+        'let collection = db.getCollection(collectionName);\n' +
+        '\n' +
+        '//Usage\n' +
+        'collection.create(element)\n' +
+        'collection.read(id)\n' +
+        'collection.update(id, element)\n' +
+        'collection.delete(id)\n' +
+        '\n' +
+        '//Async\n' +
+        'collection.create(element).then((id) => {});\n' +
+        'collection.read(id).then((element) => {});\n' +
+        'collection.update(id, element).then((success) => {});\n' +
+        'collection.delete(id).then((success) => {});'
+};

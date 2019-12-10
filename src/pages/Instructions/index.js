@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import './index.sass';
-import {copyIcon, install, usage, getUsageBlock} from "./codeExample";
+import {nodejs, python,copyIcon, install, usage, getUsageBlock} from "./codeExample";
 
 function Index(props) {
     let className = 'instructions';
     let classNameAppear = className + ' appear';
+    let classChoosedName = ' toggled';
+
+    const [chosenLanguage, setChosenLanguage] = useState(nodejs);
 
     const {apiKey} = props;
 
@@ -21,18 +24,22 @@ function Index(props) {
     });
     return (
         <div className={instructionsClass}>
-            <div className={'install ' + installCopied}>
-                <div onClick={() => setter(install, installCopied, setInstallCopied)}>{copyIcon}</div>
-                $ {install}
+            <div className="languageToggle">
+                <div className={chosenLanguage === nodejs ? 'language' + classChoosedName : 'language'} onClick={() => setChosenLanguage(nodejs)}>Node js</div>
+                <div className={chosenLanguage === python ? 'language' + classChoosedName : 'language'} onClick={() => setChosenLanguage(python)}>Python</div>
             </div>
             <h3 className='label'>Your api key:</h3>
             <div className={'apiKey ' + apiKeyCopied}>
                 <div onClick={() => setter(apiKey, apiKeyCopied, setApiKeyCopied)}>{copyIcon}</div>
                 {apiKey}
             </div>
+            <div className={'install ' + installCopied}>
+                <div onClick={() => setter(install, installCopied, setInstallCopied)}>{copyIcon}</div>
+                $ {install[chosenLanguage]}
+            </div>
             <div className={'usage ' + usageCopied}>
                 <div onClick={() => setter(usage, usageCopied, setUsageCopied)}>{copyIcon}</div>
-                {getUsageBlock(apiKey)}
+                {getUsageBlock(chosenLanguage, apiKey)}
             </div>
         </div>
     );

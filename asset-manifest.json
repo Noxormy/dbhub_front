@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dbhub_front/static/css/main.88d2cac7.chunk.css",
+    "main.css": "/dbhub_front/static/css/main.b3a6184c.chunk.css",
     "main.js": "/dbhub_front/static/js/main.545eb0a9.chunk.js",
     "main.js.map": "/dbhub_front/static/js/main.545eb0a9.chunk.js.map",
     "runtime-main.js": "/dbhub_front/static/js/runtime-main.2f78d774.js",
@@ -8,15 +8,15 @@
     "static/js/2.5146e020.chunk.js": "/dbhub_front/static/js/2.5146e020.chunk.js",
     "static/js/2.5146e020.chunk.js.map": "/dbhub_front/static/js/2.5146e020.chunk.js.map",
     "index.html": "/dbhub_front/index.html",
-    "precache-manifest.c144284042553c9d6239a2b4f57d6eb3.js": "/dbhub_front/precache-manifest.c144284042553c9d6239a2b4f57d6eb3.js",
+    "precache-manifest.31906685b8dea2a1038d6565832b0443.js": "/dbhub_front/precache-manifest.31906685b8dea2a1038d6565832b0443.js",
     "service-worker.js": "/dbhub_front/service-worker.js",
-    "static/css/main.88d2cac7.chunk.css.map": "/dbhub_front/static/css/main.88d2cac7.chunk.css.map",
+    "static/css/main.b3a6184c.chunk.css.map": "/dbhub_front/static/css/main.b3a6184c.chunk.css.map",
     "static/js/2.5146e020.chunk.js.LICENSE": "/dbhub_front/static/js/2.5146e020.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.2f78d774.js",
     "static/js/2.5146e020.chunk.js",
-    "static/css/main.88d2cac7.chunk.css",
+    "static/css/main.b3a6184c.chunk.css",
     "static/js/main.545eb0a9.chunk.js"
   ]
 }

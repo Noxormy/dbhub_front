@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './index.sass';
-import {nodejs, python,copyIcon, install, usage, getUsageBlock} from "./codeExample";
+import {nodejs, python,copyIcon, install, getUsage, getUsageBlock} from "./codeExample";
 
 function Index(props) {
     let className = 'instructions';
@@ -34,11 +34,11 @@ function Index(props) {
                 {apiKey}
             </div>
             <div className={'install ' + installCopied}>
-                <div onClick={() => setter(install, installCopied, setInstallCopied)}>{copyIcon}</div>
+                <div onClick={() => setter(install[chosenLanguage], installCopied, setInstallCopied)}>{copyIcon}</div>
                 $ {install[chosenLanguage]}
             </div>
             <div className={'usage ' + usageCopied}>
-                <div onClick={() => setter(usage, usageCopied, setUsageCopied)}>{copyIcon}</div>
+                <div onClick={() => setter(getUsage(chosenLanguage ,apiKey), usageCopied, setUsageCopied)}>{copyIcon}</div>
                 {getUsageBlock(chosenLanguage, apiKey)}
             </div>
         </div>
@@ -55,7 +55,6 @@ function copy(text, setCopied, copiedClass) {
     textarea.remove();
 
     setCopied(copiedClass);
-    console.log(copiedClass);
 }
 
 function setter(valueToCopy, variable, callback) {

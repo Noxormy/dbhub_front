@@ -9,8 +9,8 @@ export const copyIcon =
         </svg>;
 
 export const getUsageBlock = (language, apiKey) => {
-        return(
-                <p>
+        const languageUsages = {
+                'nodejs': (<p>
                     <span className="keyword">const</span> {'{'}<span className="variable">getDatabase</span>{'}'} =<span className="func"> require</span>(<span className="string">'dbhub'</span>);<br/>
                     <br/>
                     <span className="keyword">let</span> <span className="variable">apikey</span> =<span className="string"> '{apiKey}'</span>;<br/>
@@ -21,18 +21,31 @@ export const getUsageBlock = (language, apiKey) => {
                     <span className="keyword">let</span> <span className="variable">collection</span> = <span className="variable">db</span>.<span className="func">getCollection</span>(<span className="variable">collectionName</span>);<br/>
                     <br/>
                     {'//Usage'}<br/>
-                    <span className="variable">collection</span>.<span className="func">create</span>(<span className="variable">element</span>)<br/>
-                    <span className="variable">collection</span>.<span className="func">read</span>(<span className="variable">id</span>)<br/>
-                    <span className="variable">collection</span>.<span className="func">update</span>(<span className="variable">id</span>, <span className="variable">element</span>)<br/>
-                    <span className="variable">collection</span>.<span className="func">delete</span>(<span className="variable">id</span>)<br/>
-                    <br/>
-                    {'//Async'}<br/>
                     <span className="variable">collection</span>.<span className="func">create</span>(<span className="variable">element</span>).<span className="func">then</span>((<span className="variable">id</span>) => {'{}'});<br/>
                     <span className="variable">collection</span>.<span className="func">read</span>(<span className="variable">id</span>).<span className="func">then</span>((<span className="variable">element</span>) => {'{}'});<br/>
                     <span className="variable">collection</span>.<span className="func">update</span>(<span className="variable">id</span>, <span className="variable">element</span>).<span className="func">then</span>((<span className="variable">success</span>) => {'{}'});<br/>
                     <span className="variable">collection</span>.<span className="func">delete</span>(<span className="variable">id</span>).<span className="func">then</span>((<span className="variable">success</span>) => {'{}'});<br/>
                 </p>
-        )
+        ),
+            'python': (<p>
+                    <span className="keyword">import </span><span className="variable">getDatabase</span> from <span className="func"></span>(<span className="string">'dbhub'</span>)<br/>
+                    <br/>
+                    <span className="variable">apikey</span> =<span className="string"> '{apiKey}'</span><br/>
+                    <span className="variable">db</span> =<span className="func"> get_database</span>(<span className="variable">apiKey</span>)<br/>
+                    <br/>
+                    {'// Create collection'}<br/>
+                    <span className="variable">collection_name</span> = <span className="string">'example'</span><br/>
+                    <span className="variable">collection</span> = <span className="variable">db</span>.<span className="func">get_collection</span>(<span className="variable">collection_name</span>)<br/>
+                    <br/>
+                    {'//Usage'}<br/>
+                    <span className="variable">collection</span>.<span className="func">create</span>(<span className="variable">element</span>)<br/>
+                    <span className="variable">collection</span>.<span className="func">read</span>(<span className="variable">id</span>)<br/>
+                    <span className="variable">collection</span>.<span className="func">update</span>(<span className="variable">id</span>, <span className="variable">element</span>)<br/>
+                    <span className="variable">collection</span>.<span className="func">delete</span>(<span className="variable">id</span>)<br/>
+                    <br/>
+            </p>
+            )};
+            return languageUsages[language];
 };
 
 export const nodejs = 'nodejs';
@@ -43,46 +56,38 @@ export const install = {
     'python': 'pip install dbhub'
 };
 
-export const usage = {
-    'nodejs': 'const {getDatabase} = require(\'dbhub\');\n' +
-        '\n' +
-        'let apikey = \'\';\n' +
-        'let db = getDatabase(apiKey);\n' +
-        '\n' +
-        '// Create collection\n' +
-        'let collectionName = \'example\';\n' +
-        'let collection = db.getCollection(collectionName);\n' +
-        '\n' +
-        '//Usage\n' +
-        'collection.create(element)\n' +
-        'collection.read(id)\n' +
-        'collection.update(id, element)\n' +
-        'collection.delete(id)\n' +
-        '\n' +
-        '//Async\n' +
-        'collection.create(element).then((id) => {});\n' +
-        'collection.read(id).then((element) => {});\n' +
-        'collection.update(id, element).then((success) => {});\n' +
-        'collection.delete(id).then((success) => {});',
+export const getUsage = (language, apikey) => {
+    const usage = {
+            'nodejs': ('const {getDatabase} = require(\'dbhub\');\n' +
+                '\n' +
+                'let apikey = \'' + apikey + '\';\n' +
+                'let db = getDatabase(apiKey);\n' +
+                '\n' +
+                '// Create collection\n' +
+                'let collectionName = \'example\';\n' +
+                'let collection = db.getCollection(collectionName);\n' +
+                '\n' +
+                '//Usage\n' +
+                'collection.create(element).then((id) => {});\n' +
+                'collection.read(id).then((element) => {});\n' +
+                'collection.update(id, element).then((success) => {});\n' +
+                'collection.delete(id).then((success) => {});'),
 
-    'python': 'const {getDatabase} = require(\'dbhub\');\n' +
-        '\n' +
-        'let apikey = \'\';\n' +
-        'let db = getDatabase(apiKey);\n' +
-        '\n' +
-        '// Create collection\n' +
-        'let collectionName = \'example\';\n' +
-        'let collection = db.getCollection(collectionName);\n' +
-        '\n' +
-        '//Usage\n' +
-        'collection.create(element)\n' +
-        'collection.read(id)\n' +
-        'collection.update(id, element)\n' +
-        'collection.delete(id)\n' +
-        '\n' +
-        '//Async\n' +
-        'collection.create(element).then((id) => {});\n' +
-        'collection.read(id).then((element) => {});\n' +
-        'collection.update(id, element).then((success) => {});\n' +
-        'collection.delete(id).then((success) => {});'
+            'python':
+                ('import getDatabase = from \'dbhub\'\n' +
+                    '\n' +
+                    'apikey = \'' + apikey + '\'\n' +
+                    'db = get_database(apiKey)\n' +
+                    '\n' +
+                    '// Create collection\n' +
+                    'collectionName = \'example\';\n' +
+                    'collection = db.get_collection(collection_name)\n' +
+                    '\n' +
+                    '//Usage\n' +
+                    'collection.create(element)\n' +
+                    'collection.read(id)\n' +
+                    'collection.update(id, element)\n' +
+                    'collection.delete(id)\n')
+                };
+    return usage[language];
 };

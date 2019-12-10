@@ -28,10 +28,10 @@ export const getUsageBlock = (language, apiKey) => {
                 </p>
         ),
             'python': (<p>
-                    <span className="keyword">import </span><span className="variable">getDatabase</span> from <span className="func"></span>(<span className="string">'dbhub'</span>)<br/>
+                    <span className="keyword">from </span><span className="variable">dbhub</span> <span className="keyword">import</span> <span className="func"></span>(<span className="string">get_database</span>)<br/>
                     <br/>
-                    <span className="variable">apikey</span> =<span className="string"> '{apiKey}'</span><br/>
-                    <span className="variable">db</span> =<span className="func"> get_database</span>(<span className="variable">apiKey</span>)<br/>
+                    <span className="variable">api_key</span> =<span className="string"> '{apiKey}'</span><br/>
+                    <span className="variable">db</span> =<span className="func"> get_database</span>(<span className="variable">api_key</span>)<br/>
                     <br/>
                     {'// Create collection'}<br/>
                     <span className="variable">collection_name</span> = <span className="string">'example'</span><br/>
@@ -74,16 +74,16 @@ export const getUsage = (language, apikey) => {
                 'collection.delete(id).then((success) => {});'),
 
             'python':
-                ('import getDatabase = from \'dbhub\'\n' +
+                ('from dbhub import get_database\n' +
                     '\n' +
-                    'apikey = \'' + apikey + '\'\n' +
-                    'db = get_database(apiKey)\n' +
+                    'api_key = \'aa57dc3a-df8c-1c53-b5f7-6c598a7e4644\'\n' +
+                    'db = get_database(api_key)\n' +
                     '\n' +
-                    '// Create collection\n' +
-                    'collectionName = \'example\';\n' +
+                    '# Create collection\n' +
+                    'collection_name = \'example\'\n' +
                     'collection = db.get_collection(collection_name)\n' +
                     '\n' +
-                    '//Usage\n' +
+                    '# Usage\n' +
                     'collection.create(element)\n' +
                     'collection.read(id)\n' +
                     'collection.update(id, element)\n' +

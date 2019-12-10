@@ -13,7 +13,7 @@ export const getUsageBlock = (language, apiKey) => {
                 'nodejs': (<p>
                     <span className="keyword">const</span> {'{'}<span className="variable">getDatabase</span>{'}'} =<span className="func"> require</span>(<span className="string">'dbhub'</span>);<br/>
                     <br/>
-                    <span className="keyword">let</span> <span className="variable">apikey</span> =<span className="string"> '{apiKey}'</span>;<br/>
+                    <span className="keyword">let</span> <span className="variable">apiKey</span> =<span className="string"> '{apiKey}'</span>;<br/>
                     <span className="keyword">let</span> <span className="variable">db</span> =<span className="func"> getDatabase</span>(<span className="variable">apiKey</span>);<br/>
                     <br/>
                     {'// Create collection'}<br/>
@@ -60,7 +60,7 @@ export const getUsage = (language, apikey) => {
     const usage = {
             'nodejs': ('const {getDatabase} = require(\'dbhub\');\n' +
                 '\n' +
-                'let apikey = \'' + apikey + '\';\n' +
+                'let apiKey = \'' + apikey + '\';\n' +
                 'let db = getDatabase(apiKey);\n' +
                 '\n' +
                 '// Create collection\n' +

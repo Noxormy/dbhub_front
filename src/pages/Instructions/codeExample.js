@@ -28,7 +28,7 @@ export const getUsageBlock = (language, apiKey) => {
                 </p>
         ),
             'python': (<p>
-                    <span className="keyword">from </span><span className="variable">dbhub</span> <span className="keyword">import</span> <span className="func"></span>(<span className="string">get_database</span>)<br/>
+                    <span className="keyword">from </span><span className="variable">dbhub</span> <span className="keyword">import</span> <span className="func"></span><span className="string">get_database</span><br/>
                     <br/>
                     <span className="variable">api_key</span> =<span className="string"> '{apiKey}'</span><br/>
                     <span className="variable">db</span> =<span className="func"> get_database</span>(<span className="variable">api_key</span>)<br/>

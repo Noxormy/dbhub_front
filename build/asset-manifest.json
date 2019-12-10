@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/dbhub_front/static/css/main.813f6adc.chunk.css",
-    "main.js": "/dbhub_front/static/js/main.545eb0a9.chunk.js",
-    "main.js.map": "/dbhub_front/static/js/main.545eb0a9.chunk.js.map",
+    "main.css": "/dbhub_front/static/css/main.b3a6184c.chunk.css",
+    "main.js": "/dbhub_front/static/js/main.d2f33eae.chunk.js",
+    "main.js.map": "/dbhub_front/static/js/main.d2f33eae.chunk.js.map",
     "runtime-main.js": "/dbhub_front/static/js/runtime-main.2f78d774.js",
     "runtime-main.js.map": "/dbhub_front/static/js/runtime-main.2f78d774.js.map",
     "static/js/2.5146e020.chunk.js": "/dbhub_front/static/js/2.5146e020.chunk.js",
     "static/js/2.5146e020.chunk.js.map": "/dbhub_front/static/js/2.5146e020.chunk.js.map",
     "index.html": "/dbhub_front/index.html",
-    "precache-manifest.ee5f752fb59c79c7d9a4cfb216dc8368.js": "/dbhub_front/precache-manifest.ee5f752fb59c79c7d9a4cfb216dc8368.js",
+    "precache-manifest.6cdc7c7a0edf154196e3448b89ffbfe5.js": "/dbhub_front/precache-manifest.6cdc7c7a0edf154196e3448b89ffbfe5.js",
     "service-worker.js": "/dbhub_front/service-worker.js",
-    "static/css/main.813f6adc.chunk.css.map": "/dbhub_front/static/css/main.813f6adc.chunk.css.map",
+    "static/css/main.b3a6184c.chunk.css.map": "/dbhub_front/static/css/main.b3a6184c.chunk.css.map",
     "static/js/2.5146e020.chunk.js.LICENSE": "/dbhub_front/static/js/2.5146e020.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.2f78d774.js",
     "static/js/2.5146e020.chunk.js",
-    "static/css/main.813f6adc.chunk.css",
-    "static/js/main.545eb0a9.chunk.js"
+    "static/css/main.b3a6184c.chunk.css",
+    "static/js/main.d2f33eae.chunk.js"
   ]
 }

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1724b8f7581bc46210a694fdc156a439",
+    "revision": "e5b5bc2d1c930ea7ba8dd53f312a3d38",
     "url": "/dbhub_front/index.html"
   },
   {
-    "revision": "af519707088068485943",
+    "revision": "9f1d461303a67aaae73b",
     "url": "/dbhub_front/static/css/main.b3a6184c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dbhub_front/static/js/2.5146e020.chunk.js.LICENSE"
   },
   {
-    "revision": "af519707088068485943",
-    "url": "/dbhub_front/static/js/main.545eb0a9.chunk.js"
+    "revision": "9f1d461303a67aaae73b",
+    "url": "/dbhub_front/static/js/main.903b8b67.chunk.js"
   },
   {
     "revision": "ed6fa2026c41154ccacb",

@@ -60,8 +60,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ma
 This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
 ### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+`npm run deploy`
+### But before it, after build you need to replace all '/dbhub_front/' to '/' in index.html
 
 ### `npm run build` fails to minify
 

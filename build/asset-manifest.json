@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/dbhub_front/static/css/main.b3a6184c.chunk.css",
-    "main.js": "/dbhub_front/static/js/main.c617855b.chunk.js",
-    "main.js.map": "/dbhub_front/static/js/main.c617855b.chunk.js.map",
+    "main.css": "/dbhub_front/static/css/main.3e6b4d25.chunk.css",
+    "main.js": "/dbhub_front/static/js/main.d245088e.chunk.js",
+    "main.js.map": "/dbhub_front/static/js/main.d245088e.chunk.js.map",
     "runtime-main.js": "/dbhub_front/static/js/runtime-main.2f78d774.js",
     "runtime-main.js.map": "/dbhub_front/static/js/runtime-main.2f78d774.js.map",
-    "static/js/2.5146e020.chunk.js": "/dbhub_front/static/js/2.5146e020.chunk.js",
-    "static/js/2.5146e020.chunk.js.map": "/dbhub_front/static/js/2.5146e020.chunk.js.map",
+    "static/js/2.61abaa71.chunk.js": "/dbhub_front/static/js/2.61abaa71.chunk.js",
+    "static/js/2.61abaa71.chunk.js.map": "/dbhub_front/static/js/2.61abaa71.chunk.js.map",
     "index.html": "/dbhub_front/index.html",
-    "precache-manifest.1c608f63de1197621543182708cccf88.js": "/dbhub_front/precache-manifest.1c608f63de1197621543182708cccf88.js",
+    "precache-manifest.b8efc3c5382ac8b6a5390c3ec3beec79.js": "/dbhub_front/precache-manifest.b8efc3c5382ac8b6a5390c3ec3beec79.js",
     "service-worker.js": "/dbhub_front/service-worker.js",
-    "static/css/main.b3a6184c.chunk.css.map": "/dbhub_front/static/css/main.b3a6184c.chunk.css.map",
-    "static/js/2.5146e020.chunk.js.LICENSE": "/dbhub_front/static/js/2.5146e020.chunk.js.LICENSE"
+    "static/css/main.3e6b4d25.chunk.css.map": "/dbhub_front/static/css/main.3e6b4d25.chunk.css.map",
+    "static/js/2.61abaa71.chunk.js.LICENSE": "/dbhub_front/static/js/2.61abaa71.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.2f78d774.js",
-    "static/js/2.5146e020.chunk.js",
-    "static/css/main.b3a6184c.chunk.css",
-    "static/js/main.c617855b.chunk.js"
+    "static/js/2.61abaa71.chunk.js",
+    "static/css/main.3e6b4d25.chunk.css",
+    "static/js/main.d245088e.chunk.js"
   ]
 }

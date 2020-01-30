@@ -1,4 +1,18 @@
+@import 'variables'
+
 @mixin displayCentered
   display: flex
   justify-content: space-around
   align-items: center
+
+@mixin displayCenteredVertical
+  display: flex
+  flex-direction: column
+  align-items: center
+  
+@mixin mainBackgroundAndBorder
+  position: relative
+  background: $main_fields_color
+  border: 3px solid $main_border_color
+  border-radius: 3px
+  overflow: auto

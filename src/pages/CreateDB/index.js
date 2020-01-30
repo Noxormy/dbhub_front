@@ -1,26 +1,35 @@
-import Button from '../../components/Button/Button';
-import { useState } from 'react'
-import React from 'react';
+import React, { useState } from 'react'
 import './index.sass';
+import Button from '../../components/Button';
+import { loadApiKey } from "../../network/requests";
+import LoadingBar from "../../components/loadingBar";
 
-function CreateDB(props) {
+
+function CreateDB({ setApiKey }) {
     let [isLoading, setLoading] = useState(false);
     const animationType = '3s ease-in-out infinite loading';
     
     return(
-        <div>
-            <div id='loaderPlaceholder'/>
-            <div id='loader' style={isLoading ? {animation: animationType} : {animation: 'none'}}/>
-            <div className='create_element'>
-                <h2>Create database in one click</h2>
-                <h3>Make it easy</h3>
-                <Button name={'Create Database'}
-                        callback={() => props.createDatabase(setLoading)
-                            .then((apiKey) => props.setApiKey(apiKey))}
-                />
-            </div>
+        <div className='createElement'>
+            <LoadingBar isLoading={isLoading} animationType={animationType}/>
+            <h2>Create database in one click</h2>
+            <h3>Make it easy</h3>
+            <Button name={'Create Database'}
+                    callback={() => tryToLoadApiKey(loadApiKey, setLoading, setApiKey)}/>
         </div>
     );
 }
+
+
+async function tryToLoadApiKey(loadApiKey, setLoading, setApiKey) {
+    try {
+        let apiKey = await loadApiKey(setLoading);
+        setApiKey(apiKey);
+    }
+    catch (e) {
+        console.error(e);
+    }
+}
+
 
 export default CreateDB;

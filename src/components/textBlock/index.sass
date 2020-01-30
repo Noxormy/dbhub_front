@@ -1,0 +1,46 @@
+@import 'commons'
+
+.textBlock
+  display: flex
+  align-items: center
+  padding-left: 20px
+  @include mainBackgroundAndBorder
+
+  &::before
+    content: 'C'
+    @include displayCentered
+    position: absolute
+    right: 10px
+    top: 10px
+    width: 30px
+    height: 30px
+    background: $main_border_color
+    color: $main_fields_color
+    transition: ease-out 0.5s
+    opacity: 0
+    border-radius: 3px
+
+.copy
+  position: absolute
+  right: 10px
+  top: 10px
+  width: 30px
+  height: 30px
+  fill: $main_border_color
+  cursor: pointer
+  transition: opacity 2s, fill 0.5s
+
+  &:hover
+    fill: white
+
+  &:active
+    right: 9px
+    top: 11px
+
+.copied
+  &::before
+    opacity: 1 !important
+    z-index: 1
+
+  & .copy
+    opacity: 0

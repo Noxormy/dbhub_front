@@ -1,22 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './index.sass'
 
+
+const buttonsBlockClass = 'toggleButtons';
+const buttonClass = 'toggleButton';
+const toggledClass = 'toggled';
+
+
 function Toggle(props) {
-    let [isToggled, setToggle] = useState(false);
     let buttons = props.buttons.map((element, key) => {
-        let className = isToggled ? 'toggleButton toggled' : 'toggleButton';
-        return (
-            <div className={className}
-                 key={key} onClick={() => setToggle(!isToggled)}>
-                {element}
-            </div>
-        )});
+        let className = buttonClass;
+        className += key === props.toggledKey ? ' ' + toggledClass : '' ;
+        return (<div className={className} onClick={() => props.setToggledKey(key)} key={key}>{element}</div>)
+    });
     
     return(
-        <div className='toggleButtons'>
-            { buttons }
-        </div>
+        <div className={buttonsBlockClass + ' ' + props.className}>{ buttons }</div>
     )
 }
+
 
 export default Toggle

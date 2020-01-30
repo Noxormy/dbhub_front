@@ -1,31 +1,22 @@
 import React, {useState} from 'react';
 import './App.sass';
-import Instructions from './pages/Instructions/instructions';
+import Instructions from './pages/Instructions';
 import CreateDB from './pages/CreateDB';
-import { createDatabase } from "./network/requests";
+import { loadApiKeyFromLocalStorage } from "./network/local";
+
 
 function App() {
-    let [apiKey, setApiKey] = useState(getApiKeyFromLocalStorage());
-    let body = apiKey ? <Instructions apiKey={apiKey}/> :
-        <CreateDB createDatabase={createDatabase} setApiKey={setApiKey}/>;
+    let [apiKey, setApiKey] = useState(loadApiKeyFromLocalStorage());
+    let body = apiKey ? <Instructions apiKey={apiKey}/> : <CreateDB setApiKey={setApiKey}/>;
 
     return (
     <div className='App'>
         <header className='header'>DB<span className='header-selection'>hub</span></header>
         {body}
-        <div className='signs'>Created by @noxormy</div>
+        <div className='signs'>Created by <a href='https://twitter.com/nnoxnnox'>@noxormy</a></div>
     </div>
   );
 }
 
-function getApiKeyFromLocalStorage() {
-    try {
-        return localStorage.getItem('apiKey');
-    }
-    catch (e) {
-        console.log(e);
-        return null;
-    }
-}
 
 export default App;

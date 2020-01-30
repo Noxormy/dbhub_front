@@ -1,15 +1,18 @@
+@import 'variables'
+
 .button
   width: 200px
   height: 60px
-  border: 1px solid orange
+  margin: 10px auto
+  border: 1px solid $main_border_color
   background: #0003
   border-radius: 3px
-  color: orange
+  color: $main_border_color
   font-weight: 600
   cursor: pointer
   transition: width 0.5s
-  box-shadow: 7px 5px 1px orange
-  margin: 10px auto
+  box-shadow: 7px 5px 1px $main_border_color
+  outline: none !important
 
   &:hover
     width: 250px

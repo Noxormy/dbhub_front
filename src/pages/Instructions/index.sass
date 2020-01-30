@@ -1,112 +1,31 @@
-.instructions
+@import 'variables'
+
+#instructions
   position: relative
-  margin: calc(50px + 2vmin) auto 50px
-  width: 500px
+  width: 550px
   text-align: left
   font-family: monospace
-  font-size: 14px
-  transition: opacity 2s
+  font-size: $main_text_font_size
+  transition: opacity 3s
   opacity: 0
 
-  > div
-    position: relative
-    background: #121313
-    border: 3px solid #FFA500
-    border-radius: 3px
-    overflow: auto
-
-    &::before
-      content: 'C'
-      display: flex
-      width: 30px
-      height: 30px
-      background: orange
-      position: absolute
-      right: 10px
-      top: 10px
-      justify-content: center
-      align-items: center
-      color: black
-      transition: ease-out 0.5s
-      opacity: 0
-      border-radius: 3px
-
   .languageToggle
-    display: flex
-    height: 47px
+    height: $main_block_height
 
   .install
-    height: 32px
-    padding-left: 20px
-    padding-top: 18px
-    margin-top: 20px
+    margin-top: $margin_between_text_blocks
+    height: $main_block_height
 
   .usage
-    margin-top: 20px
-    padding: 5px 20px
-    padding-bottom: 20px
+    margin-top: $margin_between_text_blocks
+    height: 300px
 
   .apiKey
-    margin-top: 20px
-    padding-left: 20px
-    padding-top: 18px
-    height: 32px
+    height: $main_block_height
+    font-size: $main_text_font_size
 
   .label
     text-align: center
 
 .appear
-  opacity: 1
-
-.usage
-  .keyword
-    /*color: #14cbff*/
-    color: orange
-  .variable
-    /*color: #ffb800*/
-    color: white
-
-  .func
-    /**color: #ccbe14*/
-    color: orange
-
-  .string
-    /*color: #40a2ff*/
-    color: #4ed900
-
-.copy
-  width: 30px
-  height: 30px
-  fill: orange
-  position: absolute
-  right: 10px
-  top: 10px
-  cursor: pointer
-  transition: fill 0.5s
-  transition: opacity 2s
-
-  &:hover
-    fill: white
-
-  &:active
-    right: 9px
-    top: 11px
-
-.copied
-  &::before
-    opacity: 1 !important
-    z-index: 1
-
-  & .copy
-    opacity: 0
-
-@media screen and (max-width: 700px)
-  .instructions
-    width: 100%
-
-    > div
-      border-left: none
-      border-right: none
-
-  .copy
-    display: none
+  opacity: 1 !important

@@ -3,18 +3,21 @@ import './index.sass';
 import Button from '../../components/Button';
 import { loadApiKey } from "../../network/requests";
 import LoadingBar from "../../components/loadingBar";
+import { useTranslation } from 'react-i18next';
 
 
 function CreateDB({ setApiKey }) {
+    const { t } = useTranslation();
+
     let [isLoading, setLoading] = useState(false);
     const animationType = '3s ease-in-out infinite loading';
     
     return(
         <div className='createElement'>
             <LoadingBar isLoading={isLoading} animationType={animationType}/>
-            <h2>Create database in one click</h2>
-            <h3>Make it easy</h3>
-            <Button name={'Create Database'}
+            <h2>{t('createInOneClick')}</h2>
+            <h3>{t('makeItEasy')}</h3>
+            <Button name={t('createDatabase')}
                     callback={() => tryToLoadApiKey(loadApiKey, setLoading, setApiKey)}/>
         </div>
     );

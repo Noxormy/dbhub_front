@@ -7,6 +7,7 @@ html
   text-align: center
 
 body
+  font-family: $main_font_family
   min-height: 100vh
   overflow-x: hidden
   background-color: $main_background_color
@@ -16,27 +17,44 @@ body
   @include displayCenteredVertical
   width: 100vw
 
-.header
-  padding: 25px 0 50px
-  font-size: 8vh
-  font-weight: 600
+  .header
+    padding: 25px 0 50px
+    font-size: 8vh
+    font-weight: 600
 
-.header-selection
-  padding-left: 5px
-  padding-right: 4px
-  margin-left: 5px
-  border-radius: 3px
-  color: $main_fields_color
-  background-color: $main_border_color
+  .header-selection
+    padding-left: 5px
+    padding-right: 4px
+    margin-left: 5px
+    border-radius: 3px
+    color: $main_fields_color
+    background-color: $main_border_color
 
-.signs
-  position: absolute
-  bottom: 0
-  left: 0
-  height: 25px
-  width: 100vw
-  padding-bottom: 10px
+  .signs
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 25px
+    width: 100vw
+    padding-bottom: 10px
 
   a
     text-decoration: none
     color: $main_border_color
+
+  .localeSettings
+    position: absolute
+    right: 5vw
+    top: 2vh
+
+    .language
+      text-decoration: underline
+      cursor: pointer
+      transition: 0.5s
+      outline: none
+
+      &:hover
+        text-shadow: 0 0 5px $main_border_color
+
+      &:active
+        color: $main_border_color

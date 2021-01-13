@@ -1,7 +1,8 @@
 {
-  "createdBy": "Создано:",
-  "createInOneClick": "Создать базу данных за один клик?",
-  "createDatabase": "Создать бд",
-  "makeItEasy": "Это легко!",
-  "yourApiKey": "Ваш апи ключ:"
+  "created_by": "Создано:",
+  "create_in_one_click": "Создать базу данных за один клик?",
+  "create_database": "Создать бд",
+  "make_it_easy": "Это легко!",
+  "your_api_key": "Ваш апи ключ:",
+  "your_db_name": "Имя вашей базы данных:"
 }

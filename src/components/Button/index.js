@@ -1,12 +1,12 @@
-import React from 'react';
-import './index.css';
+import React from 'react'
+import './index.css'
 
 
-function Button(props) {
+function Button({name, callback}) {
     return (
-        <button onClick={props.callback} className='button'>{props.name}</button>
-    );
+        <button onClick={callback} className='button'>{name}</button>
+    )
 }
 
 
-export default Button;
+export {Button}

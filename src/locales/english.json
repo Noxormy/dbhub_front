@@ -1,7 +1,8 @@
 {
-  "createdBy": "Created by",
-  "createInOneClick": "Create database in one click",
-  "createDatabase": "Create Database",
-  "makeItEasy": "Make it easy!",
-  "yourApiKey": "Your api key:"
+  "created_by": "Created by",
+  "create_in_one_click": "Create database in one click",
+  "create_database": "Create Database",
+  "make_it_easy": "Make it easy!",
+  "your_api_key": "Your api key:",
+  "your_db_name": "Your database name:"
 }

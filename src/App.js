@@ -1,31 +1,40 @@
-import React, {useState} from 'react';
-import './App.sass';
-import Instructions from './pages/Instructions';
-import CreateDB from './pages/CreateDB';
-import { loadApiKeyFromLocalStorage } from "./network/local";
-import { useTranslation } from 'react-i18next';
-import i18n from './i18next'
+import './App.sass'
+
+import React from 'react'
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+
+import {CreateDB} from './pages/CreateDB'
+import {useTranslation} from 'react-i18next'
+
+import {ProvideAuth} from "./components/ProvideAuth"
+import {PrivateRoute} from "./components/PrivateRoute"
+import {Localization} from "./components/Localization"
+import {Instructions} from "./pages/Instructions";
 
 
 function App() {
-    const { t } = useTranslation();
-
-    let [apiKey, setApiKey] = useState(loadApiKeyFromLocalStorage());
-    let body = apiKey ? <Instructions apiKey={apiKey}/> : <CreateDB setApiKey={setApiKey}/>;
+    const { t } = useTranslation()
 
     return (
     <div className='App'>
-        <div className='localeSettings'>
-            <span className='language' onClick={() => i18n.changeLanguage('en')}>en</span>
-            <span> / </span>
-            <span className='language' onClick={() => i18n.changeLanguage('ru')}>ru</span>
-        </div>
+        <Localization/>
         <header className='header'>DB<span className='header-selection'>hub</span></header>
-        {body}
-        <div className='signs'>{t('createdBy')} <a href='https://twitter.com/nnoxnnox'>@noxormy</a></div>
+        <ProvideAuth>
+            <Router>
+                <Switch>
+                    <Route exact path="/">
+                        <CreateDB/>
+                    </Route>
+                    <PrivateRoute path="/credentials">
+                        <Instructions/>
+                    </PrivateRoute>
+                </Switch>
+            </Router>
+        </ProvideAuth>
+        <div className='signs'>{t('created_by')} <a href='https://twitter.com/nnoxnnox'>@noxormy</a></div>
     </div>
-  );
+  )
 }
 
 
-export default App;
+export default App

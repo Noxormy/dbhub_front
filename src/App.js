@@ -2,14 +2,16 @@ import './App.sass'
 
 import React from 'react'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import {useTranslation} from 'react-i18next'
+
+import {PREFIX} from "./network/env"
 
 import {CreateDB} from './pages/CreateDB'
-import {useTranslation} from 'react-i18next'
+import {Instructions} from "./pages/Instructions";
 
 import {ProvideAuth} from "./components/ProvideAuth"
 import {PrivateRoute} from "./components/PrivateRoute"
 import {Localization} from "./components/Localization"
-import {Instructions} from "./pages/Instructions";
 
 
 function App() {
@@ -22,10 +24,10 @@ function App() {
         <ProvideAuth>
             <Router>
                 <Switch>
-                    <Route exact path="/">
+                    <Route exact path={`${PREFIX}`}>
                         <CreateDB/>
                     </Route>
-                    <PrivateRoute path="/credentials">
+                    <PrivateRoute path={`${PREFIX}credentials`}>
                         <Instructions/>
                     </PrivateRoute>
                 </Switch>

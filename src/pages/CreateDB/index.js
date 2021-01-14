@@ -3,7 +3,9 @@ import './index.sass'
 import React, {useState} from 'react'
 import {useHistory} from "react-router-dom"
 import {useTranslation} from 'react-i18next'
+
 import {useAuth} from "../../network/auth"
+import {PREFIX} from "../../network/env"
 
 import {Button} from '../../components/Button'
 import {LoadingBar} from "../../components/LoadingBar"
@@ -15,7 +17,7 @@ function CreateDB() {
     const auth = useAuth()
 
     let [isLoading, setLoading] = useState(false)
-    const login = () => auth.signIn(() => history.push("/credentials"), setLoading)
+    const login = () => auth.signIn(() => history.push(`${PREFIX}credentials`), setLoading)
     
     return(
         <div className='createElement'>

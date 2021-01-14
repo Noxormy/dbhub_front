@@ -1,4 +1,5 @@
 import {useAuth} from "../../network/auth"
+import {PREFIX} from "../../network/env"
 import {Redirect, Route} from "react-router-dom"
 
 function PrivateRoute({children}) {
@@ -11,7 +12,7 @@ function PrivateRoute({children}) {
                 ) : (
                     <Redirect
                         to={{
-                            pathname: "/",
+                            pathname: PREFIX,
                             state: { from: location }
                         }}
                     />

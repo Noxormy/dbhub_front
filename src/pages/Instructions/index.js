@@ -8,6 +8,7 @@ import {getInstall, getUsageBlock, JAVASCRIPT, PYTHON } from "./codeExample"
 import {useAuth} from "../../network/auth"
 import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
 import { cb } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {useWindowSize} from "../../helpers/visual";
 
 const instructionsClassName = 'instructions'
 const appear = 'appear'
@@ -19,6 +20,9 @@ function Instructions() {
     const auth = useAuth()
     const token = auth.user.token
     const dbName = auth.user.dbName
+
+    const {width} = useWindowSize()
+    const isMobile = width < 500
 
     console.log(token)
     console.log(dbName)
@@ -50,7 +54,8 @@ function Instructions() {
             <SyntaxHighlighter class="bordered" language='bash' style={cb}>
                 {'$ ' + getInstall(language)}
             </SyntaxHighlighter>
-            <SyntaxHighlighter class="bordered" showLineNumbers={true} language={language} style={cb}>
+            <SyntaxHighlighter lineNumberContainerStyle={{paddingLeft: 0}} class="bordered" showLineNumbers={!isMobile}
+                               language={language} style={cb}>
                 {getUsageBlock(language, token, dbName)}
             </SyntaxHighlighter>
         </div>

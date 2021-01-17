@@ -4,5 +4,6 @@
   "create_database": "Create Database",
   "make_it_easy": "Make it easy!",
   "your_api_key": "Your api key:",
-  "your_db_name": "Your database name:"
+  "your_db_name": "Your database name:",
+  "donation": "Support the project"
 }

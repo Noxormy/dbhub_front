@@ -28,20 +28,27 @@ body
     padding-right: 4px
     margin-left: 5px
     border-radius: 3px
-    color: $main_fields_color
+    color: $main_text_area_background
     background-color: $main_border_color
 
   .signs
     position: absolute
     bottom: 0
     left: 0
-    height: 25px
+    height: 45px
     width: 100vw
     padding-bottom: 10px
 
-  a
-    text-decoration: none
-    color: $main_border_color
+    .donations
+      margin-bottom: 5px
+
+    a
+      text-decoration: none
+      color: $main_border_color
+      transition: 0.3s
+
+    a:hover
+      color: darken($main_border_color, 20%)
 
   .localeSettings
     position: absolute

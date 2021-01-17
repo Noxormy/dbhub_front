@@ -4,5 +4,6 @@
   "create_database": "Создать бд",
   "make_it_easy": "Это легко!",
   "your_api_key": "Ваш апи ключ:",
-  "your_db_name": "Имя вашей базы данных:"
+  "your_db_name": "Имя вашей базы данных:",
+  "donation": "Поддержать проект"
 }

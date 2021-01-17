@@ -12,6 +12,7 @@ import {Instructions} from "./pages/Instructions";
 import {ProvideAuth} from "./components/ProvideAuth"
 import {PrivateRoute} from "./components/PrivateRoute"
 import {Localization} from "./components/Localization"
+import {Donation} from "./components/Donation";
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
 
     return (
     <div className='App'>
-        <Localization/>
+        {/*<Localization/>*/}
         <header className='header'>DB<span className='header-selection'>hub</span></header>
         <ProvideAuth>
             <Router>
@@ -33,7 +34,10 @@ function App() {
                 </Switch>
             </Router>
         </ProvideAuth>
-        <div className='signs'>{t('created_by')} <a href='https://twitter.com/nnoxnnox'>@noxormy</a></div>
+        <div className='signs'>
+            <Donation className='donations'/>
+            <div>{t('created_by')} <a href='https://twitter.com/nnoxnnox'>@noxormy</a></div>
+        </div>
     </div>
   )
 }

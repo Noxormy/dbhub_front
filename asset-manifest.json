@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/dbhub_front/static/css/main.aa45a5ff.chunk.css",
-    "main.js": "/dbhub_front/static/js/main.abdf5cb5.chunk.js",
-    "main.js.map": "/dbhub_front/static/js/main.abdf5cb5.chunk.js.map",
+    "main.css": "/dbhub_front/static/css/main.6ea282ce.chunk.css",
+    "main.js": "/dbhub_front/static/js/main.214e3e89.chunk.js",
+    "main.js.map": "/dbhub_front/static/js/main.214e3e89.chunk.js.map",
     "runtime-main.js": "/dbhub_front/static/js/runtime-main.3b6c1222.js",
     "runtime-main.js.map": "/dbhub_front/static/js/runtime-main.3b6c1222.js.map",
-    "static/js/2.3879b223.chunk.js": "/dbhub_front/static/js/2.3879b223.chunk.js",
-    "static/js/2.3879b223.chunk.js.map": "/dbhub_front/static/js/2.3879b223.chunk.js.map",
+    "static/js/2.e6c3cf2b.chunk.js": "/dbhub_front/static/js/2.e6c3cf2b.chunk.js",
+    "static/js/2.e6c3cf2b.chunk.js.map": "/dbhub_front/static/js/2.e6c3cf2b.chunk.js.map",
     "index.html": "/dbhub_front/index.html",
-    "static/css/main.aa45a5ff.chunk.css.map": "/dbhub_front/static/css/main.aa45a5ff.chunk.css.map",
-    "static/js/2.3879b223.chunk.js.LICENSE.txt": "/dbhub_front/static/js/2.3879b223.chunk.js.LICENSE.txt"
+    "static/css/main.6ea282ce.chunk.css.map": "/dbhub_front/static/css/main.6ea282ce.chunk.css.map",
+    "static/js/2.e6c3cf2b.chunk.js.LICENSE.txt": "/dbhub_front/static/js/2.e6c3cf2b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3b6c1222.js",
-    "static/js/2.3879b223.chunk.js",
-    "static/css/main.aa45a5ff.chunk.css",
-    "static/js/main.abdf5cb5.chunk.js"
+    "static/js/2.e6c3cf2b.chunk.js",
+    "static/css/main.6ea282ce.chunk.css",
+    "static/js/main.214e3e89.chunk.js"
   ]
 }

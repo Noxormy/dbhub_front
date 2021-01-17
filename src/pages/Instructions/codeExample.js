@@ -7,8 +7,8 @@ export const getUsageBlock = (language, token, dbName) => {
 `from dbhub import get_database
 
 db = get_database(
-   '${token}',
-   '${dbName}'
+   token='${token}',
+   db_name='${dbName}'
 )
 
 collection = db.get_collection('users')

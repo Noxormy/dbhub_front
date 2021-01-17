@@ -1,34 +1,29 @@
 import { copyIcon } from './copyIcon'
+import { copiedIcon } from './arrow'
 import './index.sass'
-import React, {useState} from 'react'
 
-const copiedClass = 'copied'
+import React from 'react'
+import {cb} from "react-syntax-highlighter/dist/cjs/styles/prism";
+import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
+import {useCopy} from "../../helpers/system";
 
 
-function TextBlock({className, text, textToCopy}) {
-    let [isCopied, setIsCopied] = useState(false)
-    let additionalClass = isCopied ? ' ' + copiedClass : ''
+function TextBlock({className, text, textToCopy, language, showLineNumbers=false}) {
+    const [copiedValue, copy] = useCopy()
+
+    textToCopy = textToCopy ? textToCopy : text
+    const isCopied = copiedValue === textToCopy
+    const icon = isCopied ? copiedIcon : copyIcon
 
     return (
-        <div className={`textBlock ${additionalClass} ${className}`}>
-            <div onClick={() => copy(textToCopy, setIsCopied)}>{copyIcon}</div>
-            {text}
+        <div className={`textBlock`}>
+            <SyntaxHighlighter className={`bordered ${className}`} language={language} style={cb}
+                               showLineNumbers={showLineNumbers}>
+                {text}
+            </SyntaxHighlighter>
+            <div onClick={() => copy(textToCopy)}>{icon}</div>
         </div>
     )
-}
-
-
-function copy(text, setIsCopied) {
-    let textarea = document.createElement('textarea')
-    textarea.setAttribute('visibility', 'collapse')
-    textarea.textContent = text
-    document.body.appendChild(textarea)
-    textarea.select()
-    document.execCommand('copy')
-    textarea.remove()
-
-    setIsCopied(true)
-    setTimeout(() => setIsCopied(false), 1000)
 }
 
 

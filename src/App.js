@@ -11,7 +11,7 @@ import {Instructions} from "./pages/Instructions";
 
 import {ProvideAuth} from "./components/ProvideAuth"
 import {PrivateRoute} from "./components/PrivateRoute"
-import {Localization} from "./components/Localization"
+// import {Localization} from "./components/Localization"
 import {Donation} from "./components/Donation";
 
 

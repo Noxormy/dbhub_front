@@ -14,6 +14,11 @@
     cursor: pointer
     font-size: $main_font_size
     transition: 0.5s
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
 
     &:hover
       flex: 1.2
@@ -21,3 +26,11 @@
   .toggled
     background: $main_border_color
     color: $additional_font_color
+
+  .disabled
+    background: gray
+    color: #b3b3b3
+
+  .noResize
+    flex: 1 !important
+    cursor: default

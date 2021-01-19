@@ -24,12 +24,12 @@ function Instructions() {
     const isMobile = width < 500
 
     const languages = [
-        JAVASCRIPT,
-        PYTHON,
+        {name: JAVASCRIPT, isDisabled: true},
+        {name: PYTHON, isDisabled: false}
     ]
 
-    let [toggledKey, setToggledKey] = useState(0)
-    let language = languages[toggledKey]
+    let [toggled, setToggled] = useState(languages.find((el) => !el.isDisabled))
+    let language = toggled.name
 
     useEffect(() => {
         let elem = document.getElementById(instructionsClassName)
@@ -38,7 +38,7 @@ function Instructions() {
 
     return (
         <div id={instructionsClassName}>
-            <Toggle className='languageToggle' buttons={languages} cb={setToggledKey}/>
+            <Toggle className='languageToggle' buttons={languages} started={toggled} cb={setToggled}/>
             <h3 className='label'>{t('your_api_key')}</h3>
             <TextBlock text={token} className="bordered" language='bash'/>
             <h3 className='label'>{t('your_db_name')}</h3>

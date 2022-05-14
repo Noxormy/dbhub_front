@@ -1,4 +1,4 @@
-const API = 'https://dbhub-py.herokuapp.com/'
+const API = 'https://dbhub-py.herokuapp.com'
 const CREATE_NEW_USER = 'create-new-user'
 
 const TOKEN = 'token'

@@ -1,20 +1,13 @@
 {
   "files": {
-    "main.css": "/dbhub_front/static/css/main.6ea282ce.chunk.css",
-    "main.js": "/dbhub_front/static/js/main.214e3e89.chunk.js",
-    "main.js.map": "/dbhub_front/static/js/main.214e3e89.chunk.js.map",
-    "runtime-main.js": "/dbhub_front/static/js/runtime-main.3b6c1222.js",
-    "runtime-main.js.map": "/dbhub_front/static/js/runtime-main.3b6c1222.js.map",
-    "static/js/2.e6c3cf2b.chunk.js": "/dbhub_front/static/js/2.e6c3cf2b.chunk.js",
-    "static/js/2.e6c3cf2b.chunk.js.map": "/dbhub_front/static/js/2.e6c3cf2b.chunk.js.map",
-    "index.html": "/dbhub_front/index.html",
-    "static/css/main.6ea282ce.chunk.css.map": "/dbhub_front/static/css/main.6ea282ce.chunk.css.map",
-    "static/js/2.e6c3cf2b.chunk.js.LICENSE.txt": "/dbhub_front/static/js/2.e6c3cf2b.chunk.js.LICENSE.txt"
+    "main.css": "./static/css/main.db7af0de.css",
+    "main.js": "./static/js/main.8005151a.js",
+    "index.html": "./index.html",
+    "main.db7af0de.css.map": "./static/css/main.db7af0de.css.map",
+    "main.8005151a.js.map": "./static/js/main.8005151a.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.3b6c1222.js",
-    "static/js/2.e6c3cf2b.chunk.js",
-    "static/css/main.6ea282ce.chunk.css",
-    "static/js/main.214e3e89.chunk.js"
+    "static/css/main.db7af0de.css",
+    "static/js/main.8005151a.js"
   ]
 }
